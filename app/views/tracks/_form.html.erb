@@ -1,0 +1,67 @@
+<%= form_with(model: track) do |form| %>
+  <% if track.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(track.errors.count, "error") %> prohibited this track from being saved:</h2>
+
+      <ul>
+        <% track.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dsp_id %>
+    <%= form.text_field :dsp_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :route_code %>
+    <%= form.text_field :route_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :service_type %>
+    <%= form.text_field :service_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wave %>
+    <%= form.time_select :wave %>
+  </div>
+
+  <div class="field">
+    <%= form.label :staging_location %>
+    <%= form.text_field :staging_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wave_no %>
+    <%= form.number_field :wave_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :driver %>
+    <%= form.text_field :driver %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pad %>
+    <%= form.number_field :pad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cycle %>
+    <%= form.number_field :cycle %>
+  </div>
+
+  <div class="field">
+    <%= form.label :arrive_at_offsite %>
+    <%= form.time_select :arrive_at_offsite %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

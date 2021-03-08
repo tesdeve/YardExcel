@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dsp:</strong>
+  <%= @track.dsp_id %>
+</p>
+
+<p>
+  <strong>Route code:</strong>
+  <%= @track.route_code %>
+</p>
+
+<p>
+  <strong>Service type:</strong>
+  <%= @track.service_type %>
+</p>
+
+<p>
+  <strong>Wave:</strong>
+  <%= @track.wave %>
+</p>
+
+<p>
+  <strong>Staging location:</strong>
+  <%= @track.staging_location %>
+</p>
+
+<p>
+  <strong>Wave no:</strong>
+  <%= @track.wave_no %>
+</p>
+
+<p>
+  <strong>Driver:</strong>
+  <%= @track.driver %>
+</p>
+
+<p>
+  <strong>Pad:</strong>
+  <%= @track.pad %>
+</p>
+
+<p>
+  <strong>Cycle:</strong>
+  <%= @track.cycle %>
+</p>
+
+<p>
+  <strong>Arrive at offsite:</strong>
+  <%= @track.arrive_at_offsite %>
+</p>
+
+<%= link_to 'Edit', edit_track_path(@track) %> |
+<%= link_to 'Back', tracks_path %>

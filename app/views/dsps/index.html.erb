@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p><%= link_to 'Home', root_path %></p>
+
+<h1>Dsps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Dsp name</th>
+      <th>Dsp admin name</th>
+      <th>Dsp admin surname</th>
+      <th>Dsp admin email</th>
+      <th>Dsp admin number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dsps.each do |dsp| %>
+      <tr>
+        <td><%= dsp.name %></td>
+        <td><%= dsp.dsp_admin_name %></td>
+        <td><%= dsp.dsp_admin_surname %></td>
+        <td><%= dsp.dsp_admin_email %></td>
+        <td><%= dsp.dsp_admin_number %></td>
+        <td><%= link_to 'Show', dsp %></td>
+        <td><%= link_to 'Edit', edit_dsp_path(dsp) %></td>
+        <td><%= link_to 'Destroy', dsp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dsp', new_dsp_path %>

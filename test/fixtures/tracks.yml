@@ -1,0 +1,50 @@
+# == Schema Information
+#
+# Table name: tracks
+#
+#  id                :bigint           not null, primary key
+#  arrive_at_offsite :time
+#  cycle             :integer
+#  driver            :string
+#  pad               :integer
+#  route_code        :string
+#  service_type      :string
+#  staging_location  :string
+#  wave              :time
+#  wave_no           :integer
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#  dsp_id            :bigint           not null
+#
+# Indexes
+#
+#  index_tracks_on_dsp_id  (dsp_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (dsp_id => dsps.id)
+#
+
+one:
+  dsp: one
+  route_code: MyString
+  service_type: MyString
+  wave: 2021-03-08 07:52:24
+  staging_location: MyString
+  wave_no: 1
+  driver: MyString
+  pad: 1
+  cycle: 1
+  arrive_at_offsite: 2021-03-08 07:52:24
+
+two:
+  dsp: two
+  route_code: MyString
+  service_type: MyString
+  wave: 2021-03-08 07:52:24
+  staging_location: MyString
+  wave_no: 1
+  driver: MyString
+  pad: 1
+  cycle: 1
+  arrive_at_offsite: 2021-03-08 07:52:24

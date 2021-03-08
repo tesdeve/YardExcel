@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<p><%= link_to 'Home', root_path %></p>
+
+<h1>Tracks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dsp</th>
+      <th>Route code</th>
+      <th>Service type</th>
+      <th>Wave</th>
+      <th>Staging location</th>
+      <th>Wave no</th>
+      <th>Driver</th>
+      <th>Pad</th>
+      <th>Cycle</th>
+      <th>Arrive at offsite</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tracks.each do |track| %>
+      <tr>
+        <td><%= track.dsp_id %></td>
+        <td><%= track.route_code %></td>
+        <td><%= track.service_type %></td>
+        <td><%= track.wave %></td>
+        <td><%= track.staging_location %></td>
+        <td><%= track.wave_no %></td>
+        <td><%= track.driver %></td>
+        <td><%= track.pad %></td>
+        <td><%= track.cycle %></td>
+        <td><%= track.arrive_at_offsite %></td>
+        <td><%= link_to 'Show', track %></td>
+        <td><%= link_to 'Edit', edit_track_path(track) %></td>
+        <td><%= link_to 'Destroy', track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Track', new_track_path %>
